@@ -1,15 +1,18 @@
-name: Wake Render Service
+name: Wake Render Services
 
 on:
   schedule:
-    # 日本时间 14:33 - 14:59，每 5 分钟一次
-    - cron: '35,45,55 6 * * *'
+    - cron: '33-59/10 6 * * 1-5'
   workflow_dispatch:
 
 jobs:
   wake:
     runs-on: ubuntu-latest
     steps:
-      - name: Wake Render
+      - name: Wake Render App 1
         run: |
-          curl -I https://kzz-select.onrender.com
+          curl -I https://app-one.onrender.com
+
+      - name: Wake Render App 2
+        run: |
+          curl -I https://app-two.onrender.com
