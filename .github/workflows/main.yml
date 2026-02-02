@@ -11,8 +11,8 @@ jobs:
     steps:
       - name: Wake Render App 1
         run: |
-          curl -I https://app-one.onrender.com
+          curl -I https://kzz-select.onrender.com
 
       - name: Wake Render App 2
         run: |
-          curl -I https://app-two.onrender.com
+          curl -I https://bdmster-new.onrender.com
